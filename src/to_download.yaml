@@ -1,0 +1,34 @@
+checkpoint:
+  # SDXL
+  # - epic-realism-xl.safetensors
+  # - realism-engine-sdxl.safetensors
+  # - realism-engine-db-2.safetensors
+  # - realistic-stock-photo-v2-sdxl.safetensors
+  # - realvisXL-v4-sdxl.safetensors
+  # - realistic-vision-sd15.safetensors
+  # - realistic-stock-photo-v3-sd15.safetensors
+  # - base-model-pruned-sd15.safetensors
+  # - base-model-emaonly-sd15.safetensors
+  # - epiCRealism-natural-skin-15.safetensors
+  # - flux1-dev-fp8.safetensors
+  # - flux1-dev.safetensors
+
+unet:
+  # - flux1-dev-Q8_0.gguf
+   - flux-dev-acorn-is-spinning.safetensors
+
+lora:
+  # - flux-boring-reality_v2.safetensors
+  # - flux-amateur-photo-v3.safetensors
+  # - bad-quality-sdxl.safetensors
+  - ana-taylor-joy-lora.safetensors
+vae:
+  # - vae-ft-mse-840000-ema-pruned.safetensors
+   - ae.safetensors
+
+controlnet:
+  # - sdxl_xinsir_controlnet_union_promax.safetensors
+
+clip:
+   - t5xxl_fp8_e4m3fn.safetensors
+   - clip_l.safetensors

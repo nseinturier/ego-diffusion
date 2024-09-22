@@ -1,0 +1,14 @@
+.venv
+ComfyUI
+data/
+ego_diffusion.egg-info
+notes/
+reference_images/
+results/
+workflows/
+.env
+TODO.txt
+notebooks/
+**/__pycache__/
+src/env.yaml
+**/.DS_Store

@@ -1,0 +1,46 @@
+checkpoint:
+
+  # SDXL
+  realism-engine-sdxl.safetensors: "https://huggingface.co/sid38/base_models/resolve/main/realism-engine.safetensors"
+  realistic-stock-photo-v2-sdxl.safetensors: "https://huggingface.co/sid38/base_models/resolve/main/realistic-stock-photo.safetensors"
+  realvisXL-v4-sdxl.safetensors: "https://huggingface.co/sid38/base_models/resolve/main/realvisXL-v4.safetensors"
+  epic-realism-xl.safetensors: "https://civitai.com/api/download/models/646523?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+
+  # SD 1.5
+  realistic-vision-sd15.safetensors: "https://civitai.com/api/download/models/501240?type=Model&format=SafeTensor&size=full&fp=fp16"
+  realistic-stock-photo-v3-sd15.safetensors: "https://huggingface.co/sid38/base_models/resolve/main/realisticStockPhoto_v30SD15.safetensors"
+  base-model-pruned-sd15.safetensors: "https://huggingface.co/sid38/base_models/resolve/main/sdv1-5-pruned.safetensors"
+  base-model-emaonly-sd15.safetensors: "https://huggingface.co/sid38/base_models/resolve/main/sdv1-5-pruned-emaonly.safetensors"
+  epiCRealism-natural-skin-15.safetensors: "https://civitai.com/api/download/models/163233?type=Model&format=SafeTensor&size=full&fp=fp16"
+
+  # FLUX dev
+  flux1-dev-fp8.safetensors: "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors"
+  flux1-dev.safetensors: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
+  # Fine tuned
+  realism-engine-db-2.safetensors: "https://huggingface.co/sid38/test/resolve/main/realism-engine-db-2.safetensors"
+
+unet:
+  flux-dev-acorn-is-spinning.safetensors: "https://civitai.com/api/download/models/757421?type=Model&format=SafeTensor&size=pruned&fp=fp8"
+  flux1-dev-Q8_0.gguf: "https://huggingface.co/lllyasviel/FLUX.1-dev-gguf/resolve/d4374ef1edc2e1c0ef8907e57eb2588834170c96/flux1-dev-Q8_0.gguf"
+
+lora:
+  # FLUX dev
+  flux-boring-reality_v2.safetensors: "https://huggingface.co/sid38/loras/resolve/main/flux_boring_reality_v2.safetensors"
+  flux-amateur-photo-v3.safetensors: "https://civitai.com/api/download/models/791430?type=Model&format=SafeTensor"
+  ana-taylor-joy-lora.safetensors: "https://huggingface.co/sid38/loras/resolve/main/ana-taylor-joy-lora.safetensors"
+
+  # SDXL
+  bad-quality-sdxl.safetensors: "https://huggingface.co/sid38/loras/resolve/main/badquality_SDXL.safetensors"
+
+vae:
+  vae-ft-mse-840000-ema-pruned.safetensors: "https://huggingface.co/sid38/vae/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
+
+  # FLUX
+  ae.safetensors: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
+
+controlnet:
+  sdxl_xinsir_controlnet_union_promax.safetensors: "https://huggingface.co/sid38/controlnets/resolve/main/sdxl_xinsir_controlnet_union_promax.safetensors"
+
+clip:
+  t5xxl_fp8_e4m3fn.safetensors: "https://huggingface.co/ckpt/stable-diffusion-3-medium/resolve/3b998e720927a2f7bf10b7b17c540942d2214b7c/text_encoders/t5xxl_fp8_e4m3fn.safetensors"
+  clip_l.safetensors: "https://huggingface.co/ckpt/stable-diffusion-3-medium/resolve/3b998e720927a2f7bf10b7b17c540942d2214b7c/text_encoders/clip_l.safetensors"

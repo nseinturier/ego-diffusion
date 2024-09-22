@@ -1,0 +1,30 @@
+# Use a Python base image
+FROM python:3.11-slim
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    ffmpeg \
+    libsm6 \
+    libxext6 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Clone ComfyUI repository
+RUN git clone https://github.com/comfyanonymous/ComfyUI.git /ComfyUI
+
+# Set working directory
+WORKDIR /ComfyUI
+
+# Install ComfyUI dependencies
+# Note: We're using CPU-only PyTorch here
+RUN pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose the ComfyUI port
+EXPOSE 8188
+
+# Set the startup command
+CMD ["python", "main.py", "--listen", "--cpu"]
