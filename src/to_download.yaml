@@ -1,34 +1,50 @@
 checkpoint:
-  # SDXL
-  # - epic-realism-xl.safetensors
-  # - realism-engine-sdxl.safetensors
-  # - realism-engine-db-2.safetensors
-  # - realistic-stock-photo-v2-sdxl.safetensors
-  # - realvisXL-v4-sdxl.safetensors
-  # - realistic-vision-sd15.safetensors
-  # - realistic-stock-photo-v3-sd15.safetensors
-  # - base-model-pruned-sd15.safetensors
-  # - base-model-emaonly-sd15.safetensors
-  # - epiCRealism-natural-skin-15.safetensors
-  # - flux1-dev-fp8.safetensors
-  # - flux1-dev.safetensors
+########## SDXL ##########
+#  - epic-realism-xl.safetensors
+  - realism-engine-sdxl.safetensors
+#  - realistic-stock-photo-v2-sdxl.safetensors
+#  - realvisXL-v4-sdxl.safetensors
+ 
+########## SD 1.5 ##########
+#  - realistic-vision-sd15.safetensors
+#  - realistic-stock-photo-v3-sd15.safetensors
+#  - base-model-pruned-sd15.safetensors
+#  - base-model-emaonly-sd15.safetensors
+#  - epiCRealism-natural-skin-15.safetensors
+ 
+########## FLUX dev ##########
+#  - flux1-dev-fp8.safetensors
+#  - flux1-dev.safetensors
+ 
+########## Fine tuned ##########
+#  - realism-engine-db-2.safetensors
 
 unet:
-  # - flux1-dev-Q8_0.gguf
-   - flux-dev-acorn-is-spinning.safetensors
-
+########## FLUX dev ##########
+#  - flux-dev-acorn-is-spinning.safetensors
+#  - flux1-dev-Q8_0.gguf
 lora:
-  # - flux-boring-reality_v2.safetensors
-  # - flux-amateur-photo-v3.safetensors
-  # - bad-quality-sdxl.safetensors
-  - ana-taylor-joy-lora.safetensors
+########## FLUX dev* ##########
+#  - flux-boring-reality_v2.safetensors
+#  - flux-amateur-photo-v3.safetensors
+#  - ana-taylor-joy-lora.safetensors
+
+########## SDXL ##########
+#  - bad-quality-sdxl.safetensors
+
+
 vae:
-  # - vae-ft-mse-840000-ema-pruned.safetensors
-   - ae.safetensors
+########## SD 1.5 ##########
+#  - vae-ft-mse-840000-ema-pruned.safetensors
+
+########## FLUX ##########
+#  - ae.safetensors
 
 controlnet:
-  # - sdxl_xinsir_controlnet_union_promax.safetensors
+########## SDXL ##########
+#  - sdxl_xinsir_controlnet_union_promax.safetensors
 
 clip:
-   - t5xxl_fp8_e4m3fn.safetensors
-   - clip_l.safetensors
+########## Flux ##########
+#  - t5xxl_fp8_e4m3fn.safetensors
+#  - clip_l.safetensors
