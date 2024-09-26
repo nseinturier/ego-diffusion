@@ -3,12 +3,12 @@ from pathlib import Path
 import yaml
 from pydantic import BaseModel, Field
 from typing import Dict, Any, Literal
+import os
 
 
 # Constants
 PACKAGE_ROOT = Path(src.__file__).resolve().parent
 ROOT = PACKAGE_ROOT.parent
-ENV_YAML = PACKAGE_ROOT / 'env.yaml'
 TO_DOWNLOAD_YAML = PACKAGE_ROOT / 'to_download.yaml'
 DOWNLOAD_URLS = PACKAGE_ROOT / 'config' / 'download_urls.yaml'
 
@@ -35,7 +35,6 @@ def load_yaml_config(file_path: Path = None) -> Dict[str, Any]:
     with file_path.open("r") as file:
         return yaml.safe_load(file)
 
-ENV_CONFIG = load_yaml_config(ENV_YAML)
 TO_DOWNLOAD_CONFIG = load_yaml_config(TO_DOWNLOAD_YAML)
 
 def get_urls(
@@ -51,9 +50,9 @@ def get_all_files_urls()-> dict[str, str]:
 
 
 class Config(BaseModel):
-    mod_env: str = ENV_CONFIG["MOD_ENV"]
-    hf_token: str = ENV_CONFIG["HF_TOKEN"]
-    civitai_token: str = ENV_CONFIG["CIVITAI_TOKEN"]
+    mod_env: str = os.environ["MOD_ENV"]
+    hf_token: str = os.environ["HF_TOKEN"]
+    civitai_token: str = os.environ["CIVITAI_TOKEN"]
     custom_nodes_folder: Path = ROOT / "ComfyUI" / "custom_nodes"
     download_outputs_path: dict[str, Path] = PATH_CONFIG[mod_env]
     download_urls: dict[str, dict[str, str]] = get_all_files_urls()
