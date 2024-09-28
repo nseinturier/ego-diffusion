@@ -1,31 +1,51 @@
 # Use an NVIDIA CUDA base image with Ubuntu
 FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04
 
-# Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
 
-# Install system dependencies and Python
+ENV WORKSPACE=/workspace
+
 RUN apt-get update && apt-get install -y \
-    git \
-    python3 \
+    python3.11 \
     python3-pip \
+    curl \
+    git \
     ffmpeg \
     libsm6 \
-    libxext6 \
-    && rm -rf /var/lib/apt/lists/*
+    libxext6
 
-# Clone ComfyUI repository
-RUN git clone https://github.com/comfyanonymous/ComfyUI.git /ComfyUI
+    ### Clean up to reduce image size
+RUN apt-get autoremove -y \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/* 
 
-# Set working directory
-WORKDIR /ComfyUI
+RUN mkdir -p /workspace $WORKSPACE/ComfyUI $WORKSPACE/logs
+RUN git clone https://github.com/comfyanonymous/ComfyUI.git $WORKSPACE/ComfyUI
+RUN git clone https://github.com/ltdrdata/ComfyUI-Manager.git $WORKSPACE/ComfyUI/custom_nodes/ComfyUI-Manager
 
-# Install PyTorch with CUDA support and other dependencies
-RUN pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu124 \
-    && pip3 install -r requirements.txt
+WORKDIR /workspace
 
-# Expose the ComfyUI port
-EXPOSE 8188
+# Install requirements
+RUN pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu124
+
+RUN pip install -r $WORKSPACE/ComfyUI/requirements.txt
+RUN curl -fL https://code-server.dev/install.sh | sh
+
+EXPOSE 8188 8080
+
+# Create an info.txt file (you can modify this content as needed)
+RUN echo "ComfyUI is running. Check the logs for more information." > $WORKSPACE/logs/info.txt
+
+# Copy ego-diffusion files into the image
+COPY src/ $WORKSPACE/src/
+COPY setup.py project_setup.sh requirements.txt run.sh $WORKSPACE/
+
+RUN bash project_setup.sh
+
+# Copy the start script into the image
+COPY start.sh $WORKSPACE/start.sh
+RUN chmod +x $WORKSPACE/start.sh
 
 # Set the startup command
-CMD ["python3", "main.py", "--listen"]
+CMD ["/bin/bash", "/workspace/start.sh"]
