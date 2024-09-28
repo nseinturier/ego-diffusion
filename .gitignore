@@ -12,3 +12,4 @@ notebooks/
 **/__pycache__/
 src/env.yaml
 **/.DS_Store
+docker_commands.txt

@@ -12,8 +12,8 @@ RUN apt-get update && apt-get install -y \
     libsm6 \
     libxext6
 
-RUN mkdir -p /workspace $WORKSPACE/ComfyUI
-RUN git clone https://github.com/nseinturier/ego-diffusion.git $WORKSPACE/ego-diffusion
+RUN mkdir -p /workspace $WORKSPACE/ComfyUI $WORKSPACE/logs
+#RUN git clone https://github.com/nseinturier/ego-diffusion.git $WORKSPACE/ego-diffusion
 RUN git clone https://github.com/comfyanonymous/ComfyUI.git $WORKSPACE/ComfyUI
 RUN git clone https://github.com/ltdrdata/ComfyUI-Manager.git $WORKSPACE/ComfyUI/custom_nodes/ComfyUI-Manager
 
@@ -22,18 +22,22 @@ WORKDIR /workspace
 # Install requirements
 RUN pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 RUN pip install --no-cache-dir -r $WORKSPACE/ComfyUI/requirements.txt
-
 RUN curl -fL https://code-server.dev/install.sh | sh
 
 EXPOSE 8188 8080
 
-RUN echo '#!/bin/bash\n\
-set -x\n\
-echo "Starting code-server..."\n\
-code-server --bind-addr 0.0.0.0:8188 --auth none --user-data-dir /workspace/.vscode-server --extensions-dir /workspace/.vscode-server/extensions . &\n\
-echo "Starting ComfyUI..."\n\
-cd $WORKSPACE/ComfyUI && python main.py --listen --port 8080 --cpu\n\
-' > $WORKSPACE/start.sh && chmod +x $WORKSPACE/start.sh
+# Create an info.txt file (you can modify this content as needed)
+RUN echo "ComfyUI is running. Check the logs for more information." > $WORKSPACE/logs/info.txt
+
+# Copy ego-diffusion files into the image
+COPY src/ $WORKSPACE/src/
+COPY setup.py project_setup.sh requirements.txt run.sh $WORKSPACE/
+
+RUN bash project_setup.sh
+
+# Copy the start script into the image
+COPY start.sh $WORKSPACE/start.sh
+RUN chmod +x $WORKSPACE/start.sh
 
 # Set the startup command
 CMD ["/bin/bash", "/workspace/start.sh"]
