@@ -16,7 +16,7 @@ checkpoint:
   # SD 1.5
   realistic-vision-sd15.safetensors:
     url: "https://civitai.com/api/download/models/501240?type=Model&format=SafeTensor&size=full&fp=fp16"
-    enabled: false
+    enabled: true
   realistic-stock-photo-v3-sd15.safetensors:
     url: "https://huggingface.co/sid38/base_models/resolve/main/realisticStockPhoto_v30SD15.safetensors"
     enabled: false

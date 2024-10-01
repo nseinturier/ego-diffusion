@@ -18,11 +18,11 @@ fi
 # Run dataset script if flag is true
 if $RUN_CUSTOM_NODES; then
     echo "Running custom nodes script..."
-    python "$CUSTOM_NODES_SCRIPT"
+    python3 "$CUSTOM_NODES_SCRIPT"
 fi
 
 # Run model script if flag is true
 if $RUN_MODEL; then
     echo "Running model script..."
-    python "$MODEL_SCRIPT"
+    python3 "$MODEL_SCRIPT"
 fi

@@ -16,3 +16,7 @@ sleep 5
 
 echo "Tailing ComfyUI logs..."
 tail -f $WORKSPACE/logs/comfyui.log
+
+echo "Starting downloading models..."
+bash $WORKSPACE/project_setup.sh
+bash $WORKSPACE/download_models.sh
