@@ -43,7 +43,7 @@ RUN echo "ComfyUI is running. Check the logs for more information." > $WORKSPACE
 
 # Copy ego-diffusion files into the image
 COPY src/ $WORKSPACE/src/
-COPY setup.py project_setup.sh requirements.txt run.sh $WORKSPACE/
+COPY setup.py project_setup.sh requirements.txt download_models.sh $WORKSPACE/
 
 RUN bash project_setup.sh
 
