@@ -21,7 +21,6 @@ echo "Downloading latest models list to download..."
 curl -o "$WORKSPACE/src/config/models_config.yaml" https://raw.githubusercontent.com/nseinturier/ego-diffusion/main/src/config/models_config.yaml
 
 echo "Starting downloading models..."
-bash $WORKSPACE/project_setup.sh
 bash $WORKSPACE/download_models.sh
 
 # Keep the script running (for Docker)
