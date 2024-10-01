@@ -1,7 +1,13 @@
 # Use an NVIDIA CUDA base image with Ubuntu
 FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04
 
+# Prevents prompts from packages asking for user input during installation
 ENV DEBIAN_FRONTEND=noninteractive
+
+# Prefer binary wheels over source distributions for faster pip installations
+ENV PIP_PREFER_BINARY=1
+
+# Prevents Python from buffering output, ensuring that logs are flushed immediately
 ENV PYTHONUNBUFFERED=1
 
 ENV WORKSPACE=/workspace
@@ -11,11 +17,9 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     curl \
     git \
-    ffmpeg \
-    libsm6 \
-    libxext6
+    wget
 
-    ### Clean up to reduce image size
+# Clean up to reduce image size
 RUN apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/* 

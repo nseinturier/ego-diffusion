@@ -1,0 +1,95 @@
+checkpoint:
+  # SDXL
+  realism-engine-sdxl.safetensors:
+    url: "https://huggingface.co/sid38/base_models/resolve/main/realism-engine.safetensors"
+    enabled: false
+  realistic-stock-photo-v2-sdxl.safetensors:
+    url: "https://huggingface.co/sid38/base_models/resolve/main/realistic-stock-photo.safetensors"
+    enabled: false
+  realvisXL-v4-sdxl.safetensors:
+    url: "https://huggingface.co/sid38/base_models/resolve/main/realvisXL-v4.safetensors"
+    enabled: false
+  epic-realism-xl.safetensors:
+    url: "https://civitai.com/api/download/models/646523?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+    enabled: false
+    
+  # SD 1.5
+  realistic-vision-sd15.safetensors:
+    url: "https://civitai.com/api/download/models/501240?type=Model&format=SafeTensor&size=full&fp=fp16"
+    enabled: false
+  realistic-stock-photo-v3-sd15.safetensors:
+    url: "https://huggingface.co/sid38/base_models/resolve/main/realisticStockPhoto_v30SD15.safetensors"
+    enabled: false
+  base-model-pruned-sd15.safetensors:
+    url: "https://huggingface.co/sid38/base_models/resolve/main/sdv1-5-pruned.safetensors"
+    enabled: false
+  base-model-emaonly-sd15.safetensors:
+    url: "https://huggingface.co/sid38/base_models/resolve/main/sdv1-5-pruned-emaonly.safetensors"
+    enabled: false
+  epiCRealism-natural-skin-15.safetensors:
+    url: "https://civitai.com/api/download/models/163233?type=Model&format=SafeTensor&size=full&fp=fp16"
+    enabled: false
+
+  # FLUX dev
+  flux1-dev-fp8.safetensors:
+    url: "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors"
+    enabled: false
+  flux1-dev.safetensors:
+    url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
+
+    enabled: false
+  # Fine tuned
+  realism-engine-db-2.safetensors:
+    url: "https://huggingface.co/sid38/test/resolve/main/realism-engine-db-2.safetensors"
+    enabled: false
+
+unet:
+  flux-dev-acorn-is-spinning.safetensors:
+    url: "https://civitai.com/api/download/models/757421?type=Model&format=SafeTensor&size=pruned&fp=fp8"
+    enabled: false
+  flux1-dev-Q8_0.gguf:
+    url: "https://huggingface.co/lllyasviel/FLUX.1-dev-gguf/resolve/d4374ef1edc2e1c0ef8907e57eb2588834170c96/flux1-dev-Q8_0.gguf"
+    enabled: false
+
+lora:
+  # FLUX dev
+  flux-boring-reality_v2.safetensors:
+    url: "https://huggingface.co/sid38/loras/resolve/main/flux_boring_reality_v2.safetensors"
+    enabled: false
+  flux-amateur-photo-v3.safetensors:
+    url: "https://civitai.com/api/download/models/791430?type=Model&format=SafeTensor"
+    enabled: false
+  ana-taylor-joy-lora.safetensors:
+    url: "https://huggingface.co/sid38/loras/resolve/main/ana-taylor-joy-lora.safetensors"
+    enabled: false
+  disposable-camera-lora.safetensors:
+    url: "https://civitai.com/api/download/models/804876?type=Model&format=SafeTensor&size=full&fp=fp16"
+    enabled: false
+
+  # SDXL
+  bad-quality-sdxl.safetensors:
+    url: "https://huggingface.co/sid38/loras/resolve/main/badquality_SDXL.safetensors"
+    enabled: false
+
+vae:
+  vae-ft-mse-840000-ema-pruned.safetensors:
+    url: "https://huggingface.co/sid38/vae/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
+    enabled: false
+    
+  # FLUX
+  ae.safetensors:
+    url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
+    enabled: false
+
+controlnet:
+  sdxl_xinsir_controlnet_union_promax.safetensors:
+    url: "https://huggingface.co/sid38/controlnets/resolve/main/sdxl_xinsir_controlnet_union_promax.safetensors"
+    enabled: false
+
+clip:
+  t5xxl_fp8_e4m3fn.safetensors:
+    url: "https://huggingface.co/ckpt/stable-diffusion-3-medium/resolve/3b998e720927a2f7bf10b7b17c540942d2214b7c/text_encoders/t5xxl_fp8_e4m3fn.safetensors"
+    enabled: false
+  clip_l.safetensors:
+    url: "https://huggingface.co/ckpt/stable-diffusion-3-medium/resolve/3b998e720927a2f7bf10b7b17c540942d2214b7c/text_encoders/clip_l.safetensors"
+    enabled: false

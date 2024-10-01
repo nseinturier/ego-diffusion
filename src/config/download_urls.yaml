@@ -28,6 +28,7 @@ lora:
   flux-boring-reality_v2.safetensors: "https://huggingface.co/sid38/loras/resolve/main/flux_boring_reality_v2.safetensors"
   flux-amateur-photo-v3.safetensors: "https://civitai.com/api/download/models/791430?type=Model&format=SafeTensor"
   ana-taylor-joy-lora.safetensors: "https://huggingface.co/sid38/loras/resolve/main/ana-taylor-joy-lora.safetensors"
+  disposable-camera-lora.safetensors: "https://civitai.com/api/download/models/804876?type=Model&format=SafeTensor&size=full&fp=fp16"
 
   # SDXL
   bad-quality-sdxl.safetensors: "https://huggingface.co/sid38/loras/resolve/main/badquality_SDXL.safetensors"
