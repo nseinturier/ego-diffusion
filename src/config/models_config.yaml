@@ -64,7 +64,7 @@ lora:
     enabled: false
   disposable-camera-lora.safetensors:
     url: "https://civitai.com/api/download/models/804876?type=Model&format=SafeTensor&size=full&fp=fp16"
-    enabled: false
+    enabled: true
 
   # SDXL
   bad-quality-sdxl.safetensors:
