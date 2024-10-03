@@ -47,7 +47,7 @@ unet:
   flux-dev-acorn-is-spinning.safetensors:
     url: "https://civitai.com/api/download/models/757421?type=Model&format=SafeTensor&size=pruned&fp=fp8"
     enabled: false
-  acorn-is-spinning-flux-gguf.safetensors:
+  acorn-is-spinning-flux-gguf.gguf:
     url: "https://civitai.com/api/download/models/810653?type=Model&format=Diffusers&size=pruned&fp=fp8"
     enabled: true
   flux1-dev-Q8_0.gguf:
