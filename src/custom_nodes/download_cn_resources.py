@@ -38,7 +38,7 @@ CN_DIR_FILES_URL = {
     }
 }
 
-def run():
+def download_custom_nodes_resources():
     for custom_node_path, files_urls in CN_DIR_FILES_URL.items():
         files_downloader(files_urls, custom_node_path)
 
@@ -59,4 +59,4 @@ def files_downloader(
             logger.info(f"Skipping {file_name} download: custom node not installed or file already downloaded")
 
 if __name__ == "__main__":
-    run()
+    download_custom_nodes_resources()

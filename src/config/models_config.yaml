@@ -49,7 +49,7 @@ unet:
     enabled: false
   acorn-is-spinning-flux-gguf.gguf:
     url: "https://civitai.com/api/download/models/810653?type=Model&format=Diffusers&size=pruned&fp=fp8"
-    enabled: true
+    enabled: false
   flux1-dev-Q8_0.gguf:
     url: "https://huggingface.co/lllyasviel/FLUX.1-dev-gguf/resolve/d4374ef1edc2e1c0ef8907e57eb2588834170c96/flux1-dev-Q8_0.gguf"
     enabled: false
@@ -82,7 +82,7 @@ vae:
   # FLUX
   ae.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
-    enabled: true
+    enabled: false
 
 controlnet:
   sdxl_xinsir_controlnet_union_promax.safetensors:
@@ -92,7 +92,7 @@ controlnet:
 clip:
   t5xxl_fp8_e4m3fn.safetensors:
     url: "https://huggingface.co/ckpt/stable-diffusion-3-medium/resolve/3b998e720927a2f7bf10b7b17c540942d2214b7c/text_encoders/t5xxl_fp8_e4m3fn.safetensors"
-    enabled: true
+    enabled: false
   clip_l.safetensors:
     url: "https://huggingface.co/ckpt/stable-diffusion-3-medium/resolve/3b998e720927a2f7bf10b7b17c540942d2214b7c/text_encoders/clip_l.safetensors"
-    enabled: true
+    enabled: false

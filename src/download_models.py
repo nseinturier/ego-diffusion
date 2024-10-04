@@ -3,7 +3,7 @@ from src.in_out.download import download_file
 from logzero import logger
 
 
-def main():
+def run():
     """
     Download all the models defined in the to_download.yaml file
     """
@@ -43,4 +43,4 @@ def list_enabled_files(config: dict) -> list[str]:
 
 
 if __name__ == "__main__":
-    main()
+    run()

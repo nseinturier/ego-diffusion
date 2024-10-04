@@ -47,9 +47,9 @@ class ModelConfig(BaseModel):
 
 
 class Config(BaseModel):
-    mod_env: str = os.environ["MOD_ENV"]
-    hf_token: str = os.environ["HF_TOKEN"]
-    civitai_token: str = os.environ["CIVITAI_TOKEN"]
+    mod_env: str = os.environ.get("MOD_ENV", "comfyUI")
+    hf_token: str = os.environ.get("HF_TOKEN")
+    civitai_token: str = os.environ.get("CIVITAI_TOKEN")
     custom_nodes_folder: Path = ROOT / "ComfyUI" / "custom_nodes"
     download_outputs_path: dict[str, Path] = PATH_CONFIG[mod_env]
     downloads_info: ModelConfig

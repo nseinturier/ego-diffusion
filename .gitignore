@@ -13,3 +13,5 @@ notebooks/
 src/env.yaml
 **/.DS_Store
 docker_commands.txt
+update_yaml_file.sh
+test-docker/
