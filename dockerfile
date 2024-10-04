@@ -34,6 +34,7 @@ WORKDIR /workspace
 RUN pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu124
 
 RUN pip install -r $WORKSPACE/ComfyUI/requirements.txt
+RUN pip install -r $WORKSPACE/ComfyUI/custom_nodes/ComfyUI-Manager/requirements.txt
 RUN curl -fL https://code-server.dev/install.sh | sh
 
 EXPOSE 8188 8080
@@ -43,9 +44,10 @@ RUN echo "ComfyUI is running. Check the logs for more information." > $WORKSPACE
 
 # Copy ego-diffusion files into the image
 COPY src/ $WORKSPACE/src/
-COPY setup.py project_setup.sh requirements.txt download_models.sh $WORKSPACE/
+COPY setup.py project_setup.sh requirements.txt $WORKSPACE/
 
 RUN bash project_setup.sh
+RUN python3 $WORKSPACE/src/custom_nodes/install.py
 
 # Copy the start script into the image
 COPY start.sh $WORKSPACE/start.sh
