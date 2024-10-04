@@ -17,7 +17,10 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     curl \
     git \
-    wget
+    wget \
+    ffmpeg \
+    libsm6 \
+    libxext6
 
 # Clean up to reduce image size
 RUN apt-get autoremove -y \
