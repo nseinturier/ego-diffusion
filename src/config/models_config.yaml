@@ -12,28 +12,28 @@ checkpoint:
   epic-realism-xl.safetensors:
     url: "https://civitai.com/api/download/models/646523?type=Model&format=SafeTensor&size=pruned&fp=fp16"
     enabled: false
-    
+
   # SD 1.5
   realistic-vision-sd15.safetensors:
     url: "https://civitai.com/api/download/models/501240?type=Model&format=SafeTensor&size=full&fp=fp16"
     enabled: false
   realistic-stock-photo-v3-sd15.safetensors:
     url: "https://huggingface.co/sid38/base_models/resolve/main/realisticStockPhoto_v30SD15.safetensors"
-    enabled: false
+    enabled: true
   base-model-pruned-sd15.safetensors:
     url: "https://huggingface.co/sid38/base_models/resolve/main/sdv1-5-pruned.safetensors"
     enabled: false
   base-model-emaonly-sd15.safetensors:
     url: "https://huggingface.co/sid38/base_models/resolve/main/sdv1-5-pruned-emaonly.safetensors"
     enabled: false
-  epiCRealism-natural-skin-15.safetensors:
-    url: "https://civitai.com/api/download/models/163233?type=Model&format=SafeTensor&size=full&fp=fp16"
-    enabled: false
+  epiCRealism-natural-sin-15.safetensors:
+    url: "https://civitai.com/api/download/models/143906?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+    enabled: true
 
   # FLUX dev
   flux1-dev-fp8.safetensors:
     url: "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors"
-    enabled: true
+    enabled: false
   flux1-dev.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
 
@@ -68,6 +68,9 @@ lora:
   disposable-camera-lora.safetensors:
     url: "https://civitai.com/api/download/models/804876?type=Model&format=SafeTensor&size=full&fp=fp16"
     enabled: false
+  epiCRealism-natural-skin-15-lora.safetensors:
+    url: "https://civitai.com/api/download/models/163233?type=Model&format=SafeTensor&size=full&fp=fp16"
+    enabled: true
 
   # SDXL
   bad-quality-sdxl.safetensors:
