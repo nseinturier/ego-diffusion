@@ -15,7 +15,9 @@ NODES_TO_INSTALL = [
     "ue",
     "rgthree",
     "pulid",
-    "yoloworld"
+    "yoloworld",
+    "masquerade",
+    "face-parsing"
 ]
 
 def load_node_description():
