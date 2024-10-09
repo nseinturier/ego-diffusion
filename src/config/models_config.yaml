@@ -2,7 +2,7 @@ checkpoint:
   # SDXL
   realism-engine-sdxl.safetensors:
     url: "https://huggingface.co/sid38/base_models/resolve/main/realism-engine.safetensors"
-    enabled: false
+    enabled: true
   realistic-stock-photo-v2-sdxl.safetensors:
     url: "https://huggingface.co/sid38/base_models/resolve/main/realistic-stock-photo.safetensors"
     enabled: false
@@ -41,6 +41,11 @@ checkpoint:
   # Fine tuned
   realism-engine-db-2.safetensors:
     url: "https://huggingface.co/sid38/test/resolve/main/realism-engine-db-2.safetensors"
+    enabled: false
+
+  # Other
+  real-world_ccsr-fp32.safetensors:
+    url: "https://huggingface.co/Kijai/ccsr-safetensors/resolve/main/real-world_ccsr-fp32.safetensors"
     enabled: false
 
 unet:
