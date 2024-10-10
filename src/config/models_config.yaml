@@ -2,7 +2,7 @@ checkpoint:
   # SDXL
   realism-engine-sdxl.safetensors:
     url: "https://huggingface.co/sid38/base_models/resolve/main/realism-engine.safetensors"
-    enabled: true
+    enabled: false
   realistic-stock-photo-v2-sdxl.safetensors:
     url: "https://huggingface.co/sid38/base_models/resolve/main/realistic-stock-photo.safetensors"
     enabled: false
@@ -33,7 +33,7 @@ checkpoint:
   # FLUX dev
   flux1-dev-fp8.safetensors:
     url: "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors"
-    enabled: false
+    enabled: true
   flux1-dev.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
 
