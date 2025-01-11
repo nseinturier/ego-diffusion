@@ -1,6 +1,4 @@
 .venv
-ComfyUI
-data/
 ego_diffusion.egg-info
 notes/
 reference_images/
@@ -10,8 +8,8 @@ workflows/
 TODO.txt
 notebooks/
 **/__pycache__/
-src/env.yaml
 **/.DS_Store
 docker_commands.txt
 update_yaml_file.sh
 Docker/kohya/configure_kohya.yml
+missing_packages.txt
