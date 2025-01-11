@@ -36,7 +36,8 @@ checkpoint:
     enabled: false
   flux1-dev.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
-    enabled: false
+    enabled: true
+
   # Fine tuned
   realism-engine-db-2.safetensors:
     url: "https://huggingface.co/sid38/test/resolve/main/realism-engine-db-2.safetensors"
@@ -79,6 +80,14 @@ lora:
   # SDXL
   bad-quality-sdxl.safetensors:
     url: "https://huggingface.co/sid38/loras/resolve/main/badquality_SDXL.safetensors"
+    enabled: false
+
+  # Fine tuned
+  extracted_lora_db_1_200_epochs.safetensors:
+    url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/extracted_lora_db_1_200_epochs.safetensors"
+    enabled: True
+  Lora_flux_t3_s1.safetensors:
+    url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/Lora_flux_t3_s1.safetensors"
     enabled: false
 
 vae:
