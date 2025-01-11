@@ -1,0 +1,61 @@
+# Base image with Python 3.10
+FROM python:3.10-slim
+
+# Set workspace environment variable
+ENV WORKSPACE=/workspace
+ENV MOD_ENV="kohya"
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    python3-pip \
+    python3-venv \
+    python3-tk \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create workspace directories
+WORKDIR ${WORKSPACE}
+RUN mkdir -p ${WORKSPACE}/logs
+
+######### KOHYA #########
+
+# Clone the repository and set the specific branch
+RUN git clone --recursive -b sd3-flux.1 https://github.com/bmaltais/kohya_ss.git
+
+# Install CPU versions of PyTorch and other requirements
+RUN cd kohya_ss && \
+    pip install --upgrade pip && \
+    pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu && \
+    pip install xformers bitsandbytes tensorboard tensorflow onnxruntime && \
+    pip install -r requirements.txt
+
+
+EXPOSE 7860
+
+####### CODE SERVER ########
+
+# Install code-server
+RUN curl -fL https://code-server.dev/install.sh | sh
+
+# Copy start script
+COPY Docker/kohya/start.sh ${WORKSPACE}/start.sh
+RUN chmod +x ${WORKSPACE}/start.sh
+
+EXPOSE 8188
+
+####### Src files ########
+COPY src/ $WORKSPACE/src/
+COPY setup.py project_setup.sh requirements.txt $WORKSPACE/
+
+RUN bash project_setup.sh
+
+# Run with environment variables available during build, excluding MOD_ENV, download flux models in image
+RUN --mount=type=secret,id=dotenv \
+    export $(grep -v '^MOD_ENV=' /run/secrets/dotenv | xargs) && \
+    python3 $WORKSPACE/src/download_kohya.py
+
+# Create info file
+RUN echo "Kohya is running. Check the logs for more information." > ${WORKSPACE}/logs/info.txt
+
+CMD ["/bin/bash", "/workspace/start.sh"]
