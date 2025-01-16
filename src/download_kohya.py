@@ -13,7 +13,8 @@ def main():
     download_info = {
         **config.downloads_info.checkpoint,
         **config.downloads_info.clip,
-        **config.downloads_info.vae
+        **config.downloads_info.vae,
+        **config.downloads_info.unet
     }
     downloads_dict = {k: v for k,v in download_info.items() if k in MODELS_TO_DOWNLOAD}
     output_path = config.download_outputs_path["checkpoint"]
