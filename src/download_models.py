@@ -15,8 +15,15 @@ def run():
 
     for download_type in filtered_downloads_info:    
             logger.info(f"Downloading {download_type}...")
+            output_dir = config.download_outputs_path[download_type]
 
             for file_name, file_download_info in filtered_downloads_info[download_type].items():
+                file_path = output_dir / file_name
+
+                if file_path.exists():
+                    logger.info(f"File {file_name} already exists, skipping download...")
+                    continue
+                
                 logger.info(f"Downloading {file_name}...")
                 url = file_download_info.url
                 download_file(url, file_name, download_type)
