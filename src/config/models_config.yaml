@@ -34,9 +34,6 @@ checkpoint:
   flux1-dev-fp8.safetensors:
     url: "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors"
     enabled: false
-  flux1-dev.safetensors:
-    url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
-    enabled: true
 
   # Fine tuned
   realism-engine-db-2.safetensors:
@@ -58,6 +55,9 @@ unet:
   flux1-dev-Q8_0.gguf:
     url: "https://huggingface.co/lllyasviel/FLUX.1-dev-gguf/resolve/d4374ef1edc2e1c0ef8907e57eb2588834170c96/flux1-dev-Q8_0.gguf"
     enabled: false
+  flux1-dev.safetensors:
+    url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
+    enabled: true
 
 lora:
   # FLUX dev
@@ -98,7 +98,7 @@ vae:
   # FLUX
   ae.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
-    enabled: false
+    enabled: true
 
 controlnet:
   sdxl_xinsir_controlnet_union_promax.safetensors:
@@ -111,7 +111,7 @@ clip:
     enabled: false
   clip_l.safetensors:
     url: "https://huggingface.co/sid38/clips/resolve/main/clip_l.safetensors"
-    enabled: false
+    enabled: true
   t5xxl_fp16.safetensors:
     url: "https://huggingface.co/sid38/clips/resolve/main/t5xxl_fp16.safetensors"
-    enabled: false
+    enabled: true
