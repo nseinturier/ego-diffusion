@@ -57,7 +57,7 @@ unet:
     enabled: false
   flux1-dev.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
-    enabled: false
+    enabled: true
 
 lora:
   # FLUX dev
@@ -85,7 +85,7 @@ lora:
   # Fine tuned
   extracted_lora_db_1_200_epochs.safetensors:
     url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/extracted_lora_db_1_200_epochs.safetensors"
-    enabled: false
+    enabled: true
   Lora_flux_t3_s1.safetensors:
     url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/Lora_flux_t3_s1.safetensors"
     enabled: false
@@ -98,7 +98,7 @@ vae:
   # FLUX
   ae.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
-    enabled: false
+    enabled: true
 
 controlnet:
   sdxl_xinsir_controlnet_union_promax.safetensors:
@@ -114,4 +114,4 @@ clip:
     enabled: true
   t5xxl_fp16.safetensors:
     url: "https://huggingface.co/sid38/clips/resolve/main/t5xxl_fp16.safetensors"
-    enabled: false
+    enabled: true
