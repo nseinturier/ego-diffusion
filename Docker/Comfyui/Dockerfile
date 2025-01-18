@@ -36,10 +36,11 @@ RUN git clone https://github.com/ltdrdata/ComfyUI-Manager.git $WORKSPACE/ComfyUI
 WORKDIR /workspace
 
 # Install requirements
-RUN pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu124
+RUN pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu124 && \
+    pip install -r $WORKSPACE/ComfyUI/requirements.txt && \
+    pip install -r $WORKSPACE/ComfyUI/custom_nodes/ComfyUI-Manager/requirements.txt && \
+    pip cache purge
 
-RUN pip install -r $WORKSPACE/ComfyUI/requirements.txt
-RUN pip install -r $WORKSPACE/ComfyUI/custom_nodes/ComfyUI-Manager/requirements.txt
 RUN curl -fL https://code-server.dev/install.sh | sh
 
 EXPOSE 8188 8080

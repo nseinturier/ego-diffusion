@@ -20,7 +20,7 @@ echo "Tailing Kohya logs..."
 tail -f "${WORKSPACE}/logs/kohya.log" &
 
 echo "Starting downloading models..."
-python3 $WORKSPACE/src/download_kohya.py
+python3 $WORKSPACE/src/download_kohya_models.py
 
 # Keep container running
 tail -f /dev/null

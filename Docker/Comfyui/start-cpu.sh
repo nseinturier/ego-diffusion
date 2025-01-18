@@ -9,7 +9,7 @@ cat $WORKSPACE/logs/info.txt
 
 echo "Starting ComfyUI..."
 touch $WORKSPACE/logs/comfyui.log
-cd $WORKSPACE/ComfyUI && python3 main.py --listen --port 8080 > $WORKSPACE/logs/comfyui.log 2>&1 &
+cd $WORKSPACE/ComfyUI && python3 main.py --cpu --listen --port 8080 > $WORKSPACE/logs/comfyui.log 2>&1 &
 
 echo "Waiting for ComfyUI to start..."
 sleep 5

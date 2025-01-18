@@ -1,7 +1,7 @@
 from huggingface_hub import HfApi
 from pathlib import Path
 from src.config.core import config, ROOT
-from src.in_out.download import download_file
+from src.transfer.download import download_file
 
 # Change top variables to upload different files
 REPO_NAME = "sid38/loras"

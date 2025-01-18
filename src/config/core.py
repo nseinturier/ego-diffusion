@@ -22,9 +22,8 @@ PATH_CONFIG = {
         "unet": ROOT / "ComfyUI" / "models" / "unet",
     },
     "kohya": {
-        "checkpoint": ROOT / "kohya_ss" / "models",
-        "vae": ROOT / "kohya_ss" / "models" / "vae",
-        # Note: 'lora' is not defined for kohya_ss
+        download_type: ROOT / "kohya_ss" / "models"
+        for download_type in ["checkpoint", "vae", "lora", "clip", "controlnet", "unet"]
     },
 }
 
