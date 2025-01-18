@@ -61,24 +61,30 @@ unet:
   flux1-fill-dev.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/resolve/main/flux1-fill-dev.safetensors"
     enabled: true
+  ultra-real-flux.safetensors:
+    url: "https://civitai.com/api/download/models/1164498?type=Model&format=SafeTensor&size=full&fp=bf16"
+    enabled: true
 
 lora:
   # FLUX dev
   flux-boring-reality_v2.safetensors:
     url: "https://huggingface.co/sid38/loras/resolve/main/flux_boring_reality_v2.safetensors"
-    enabled: false
+    enabled: true
   flux-amateur-photo-v3.safetensors:
     url: "https://civitai.com/api/download/models/791430?type=Model&format=SafeTensor"
-    enabled: false
+    enabled: true
+  real-digicam-lora.safetensors:
+    url: "https://civitai.com/api/download/models/1290161?type=Model&format=SafeTensor"
+    enabled: true
   ana-taylor-joy-lora.safetensors:
     url: "https://huggingface.co/sid38/loras/resolve/main/ana-taylor-joy-lora.safetensors"
     enabled: false
   disposable-camera-lora.safetensors:
     url: "https://civitai.com/api/download/models/804876?type=Model&format=SafeTensor&size=full&fp=fp16"
-    enabled: false
-  epiCRealism-natural-skin-15-lora.safetensors:
-    url: "https://civitai.com/api/download/models/163233?type=Model&format=SafeTensor&size=full&fp=fp16"
-    enabled: false
+    enabled: true
+  lora-iphone.safetensors:
+    url: "https://civitai.com/api/download/models/967140?type=Model&format=SafeTensor"
+    enabled: true
 
   # SDXL
   bad-quality-sdxl.safetensors:
