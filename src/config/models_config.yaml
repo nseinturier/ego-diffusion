@@ -45,6 +45,7 @@ checkpoint:
     url: "https://huggingface.co/Kijai/ccsr-safetensors/resolve/main/real-world_ccsr-fp32.safetensors"
     enabled: false
 
+
 unet:
   flux-dev-acorn-is-spinning.safetensors:
     url: "https://civitai.com/api/download/models/757421?type=Model&format=SafeTensor&size=pruned&fp=fp8"
@@ -67,23 +68,28 @@ unet:
 
 lora:
   # FLUX dev
-  flux-boring-reality_v2.safetensors:
-    url: "https://huggingface.co/sid38/loras/resolve/main/flux_boring_reality_v2.safetensors"
-    enabled: true
   flux-amateur-photo-v3.safetensors:
     url: "https://civitai.com/api/download/models/791430?type=Model&format=SafeTensor"
-    enabled: true
+    enabled: false
   real-digicam-lora.safetensors:
     url: "https://civitai.com/api/download/models/1290161?type=Model&format=SafeTensor"
-    enabled: true
+    enabled: false
   ana-taylor-joy-lora.safetensors:
     url: "https://huggingface.co/sid38/loras/resolve/main/ana-taylor-joy-lora.safetensors"
     enabled: false
   disposable-camera-lora.safetensors:
     url: "https://civitai.com/api/download/models/804876?type=Model&format=SafeTensor&size=full&fp=fp16"
-    enabled: true
+    enabled: false
   lora-iphone.safetensors:
     url: "https://civitai.com/api/download/models/967140?type=Model&format=SafeTensor"
+    enabled: false
+
+  # DL reco
+  UltraRealPhotos.safetensors:
+    url: "https://civitai.com/api/download/models/1026423?type=Model&format=SafeTensor"
+    enabled: true
+  boring-reality-v2.safetensors:
+    url: "https://civitai.com/api/download/models/810340?type=Model&format=SafeTensor"
     enabled: true
 
   # SDXL
@@ -94,6 +100,12 @@ lora:
   # Fine tuned
   extracted_lora_db_1_200_epochs.safetensors:
     url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/extracted_lora_db_1_200_epochs.safetensors"
+    enabled: true
+  nico_lora_db_dl_200_epochs.safetensors:
+    url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/nico_lora_db_dl_200_epochs.safetensors"
+    enabled: true
+  nico_lora_db_dl_150_epochs.safetensors:
+    url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/nico_lora_db_dl_150_epochs.safetensors"
     enabled: true
   lora_ulysse_db_300_epochs.safetensors:
     url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/lora_ulysse_db_300_epochs.safetensors"
