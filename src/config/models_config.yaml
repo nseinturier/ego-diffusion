@@ -61,27 +61,21 @@ unet:
     enabled: true
   flux1-fill-dev.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/resolve/main/flux1-fill-dev.safetensors"
-    enabled: true
+    enabled: false
   ultra-real-flux.safetensors:
     url: "https://civitai.com/api/download/models/1164498?type=Model&format=SafeTensor&size=full&fp=bf16"
-    enabled: true
+    enabled: false
 
 lora:
   # FLUX dev
-  flux-amateur-photo-v3.safetensors:
-    url: "https://civitai.com/api/download/models/791430?type=Model&format=SafeTensor"
-    enabled: false
   real-digicam-lora.safetensors:
     url: "https://civitai.com/api/download/models/1290161?type=Model&format=SafeTensor"
     enabled: false
   ana-taylor-joy-lora.safetensors:
     url: "https://huggingface.co/sid38/loras/resolve/main/ana-taylor-joy-lora.safetensors"
     enabled: false
-  disposable-camera-lora.safetensors:
+  disposable-camera-lora.safetensors: #levelsio model
     url: "https://civitai.com/api/download/models/804876?type=Model&format=SafeTensor&size=full&fp=fp16"
-    enabled: false
-  lora-iphone.safetensors:
-    url: "https://civitai.com/api/download/models/967140?type=Model&format=SafeTensor"
     enabled: false
 
   # DL reco
@@ -90,6 +84,20 @@ lora:
     enabled: true
   boring-reality-v2.safetensors:
     url: "https://civitai.com/api/download/models/810340?type=Model&format=SafeTensor"
+    enabled: true
+  
+  # other reco
+  filmfotos.safetensors:
+    url: "https://huggingface.co/Shakker-Labs/FilmPortrait/resolve/main/filmfotos.safetensors"
+    enabled: true
+  iphone-photo.safetensors: # trigger word iphone photo
+    url: "https://civitai.com/api/download/models/967140?type=Model&format=SafeTensor"
+    enabled: true
+  amateur-photo-v6.safetensors: #check recommanded setting https://civitai.com/models/652699/amateur-photography-flux-dev
+    url: "https://civitai.com/api/download/models/993999?type=Model&format=SafeTensor"
+    enabled: true
+  spectrum-v8.safetensors: #check recommanded setting https://civitai.com/models/970862
+    url: "https://civitai.com/api/download/models/1301675?type=Model&format=SafeTensor"
     enabled: true
 
   # SDXL
