@@ -61,7 +61,10 @@ unet:
     enabled: true
   flux1-fill-dev.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/resolve/main/flux1-fill-dev.safetensors"
-    enabled: false
+    enabled: true
+  flux1-depth-dev.safetensors:
+    url: "https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev/resolve/main/flux1-depth-dev.safetensors"
+    enabled: true
   ultra-real-flux.safetensors:
     url: "https://civitai.com/api/download/models/1164498?type=Model&format=SafeTensor&size=full&fp=bf16"
     enabled: false
@@ -87,7 +90,7 @@ lora:
     enabled: true
   
   # other reco
-  filmfotos.safetensors:
+  filmfotos.safetensors: # filmfotos, film grain, reversal film photography
     url: "https://huggingface.co/Shakker-Labs/FilmPortrait/resolve/main/filmfotos.safetensors"
     enabled: true
   iphone-photo.safetensors: # trigger word iphone photo
