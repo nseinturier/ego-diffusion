@@ -65,6 +65,9 @@ unet:
   flux1-depth-dev.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev/resolve/main/flux1-depth-dev.safetensors"
     enabled: true
+  flux1-canny-dev.safetensors:
+    url: "https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev/resolve/main/flux1-canny-dev.safetensors"
+    enabled: true
   ultra-real-flux.safetensors:
     url: "https://civitai.com/api/download/models/1164498?type=Model&format=SafeTensor&size=full&fp=bf16"
     enabled: false
@@ -101,6 +104,9 @@ lora:
     enabled: true
   spectrum-v8.safetensors: #check recommanded setting https://civitai.com/models/970862
     url: "https://civitai.com/api/download/models/1301675?type=Model&format=SafeTensor"
+    enabled: true
+  antiblur-lora.safetensors: 
+    url: "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-AntiBlur/resolve/main/FLUX-dev-lora-AntiBlur.safetensors"
     enabled: true
 
   # SDXL
