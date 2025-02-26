@@ -64,13 +64,19 @@ unet:
     enabled: true
   flux1-depth-dev.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev/resolve/main/flux1-depth-dev.safetensors"
-    enabled: true
+    enabled: false
   flux1-canny-dev.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev/resolve/main/flux1-canny-dev.safetensors"
-    enabled: true
+    enabled: false
   ultra-real-flux.safetensors:
     url: "https://civitai.com/api/download/models/1164498?type=Model&format=SafeTensor&size=full&fp=bf16"
     enabled: false
+  flux-sigma-vision-alpha1.safetensors:
+    url: "https://civitai.com/api/download/models/1378381?type=Model&format=SafeTensor&size=full&fp=fp16"
+    enabled: true
+  flux-stoiqo-new-reality.safetensors:
+    url: "https://civitai.com/api/download/models/979329?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+    enabled: true
 
 lora:
   # FLUX dev
@@ -139,6 +145,9 @@ vae:
   # FLUX
   ae.safetensors:
     url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
+    enabled: true
+  vae-sigma-vision.safetensors:
+    url: "https://civitai.com/api/download/models/1378381?type=VAE&format=SafeTensor"
     enabled: true
 
 controlnet:
