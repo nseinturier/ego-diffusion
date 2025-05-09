@@ -73,10 +73,10 @@ unet:
     enabled: false
   flux-sigma-vision-alpha1.safetensors:
     url: "https://civitai.com/api/download/models/1378381?type=Model&format=SafeTensor&size=full&fp=fp16"
-    enabled: true
+    enabled: false
   flux-stoiqo-new-reality.safetensors:
     url: "https://civitai.com/api/download/models/979329?type=Model&format=SafeTensor&size=pruned&fp=fp16"
-    enabled: true
+    enabled: false
 
 lora:
   # FLUX dev
@@ -123,13 +123,13 @@ lora:
   # Fine tuned
   extracted_lora_db_1_200_epochs.safetensors:
     url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/extracted_lora_db_1_200_epochs.safetensors"
-    enabled: true
+    enabled: false
   nico_lora_db_dl_200_epochs.safetensors:
     url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/nico_lora_db_dl_200_epochs.safetensors"
     enabled: true
   nico_lora_db_dl_150_epochs.safetensors:
     url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/nico_lora_db_dl_150_epochs.safetensors"
-    enabled: true
+    enabled: false
   lora_ulysse_db_300_epochs.safetensors:
     url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/lora_ulysse_db_300_epochs.safetensors"
     enabled: true
@@ -151,7 +151,7 @@ vae:
     enabled: true
   vae-sigma-vision.safetensors:
     url: "https://civitai.com/api/download/models/1378381?type=VAE&format=SafeTensor"
-    enabled: true
+    enabled: false
 
 controlnet:
   sdxl_xinsir_controlnet_union_promax.safetensors:
