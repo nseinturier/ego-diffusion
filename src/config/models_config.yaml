@@ -136,6 +136,9 @@ lora:
   Lora_flux_t3_s1.safetensors:
     url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/Lora_flux_t3_s1.safetensors"
     enabled: false
+  lora_yvain_db_dal_200_epochs.safetensors:
+    url: "https://huggingface.co/sid38/fine_tuned_models/resolve/main/lora_yvain_db_dal_200_epochs.safetensors"
+    enabled: true
 
 vae:
   vae-ft-mse-840000-ema-pruned.safetensors:
