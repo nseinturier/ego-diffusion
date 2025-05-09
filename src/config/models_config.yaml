@@ -77,6 +77,9 @@ unet:
   flux-stoiqo-new-reality.safetensors:
     url: "https://civitai.com/api/download/models/979329?type=Model&format=SafeTensor&size=pruned&fp=fp16"
     enabled: false
+  UltraReal Fine-Tune.safetensors:
+    url: "https://civitai.com/api/download/models/1413133?type=Model&format=SafeTensor&size=full&fp=fp16"
+    enabled: true
 
 lora:
   # FLUX dev
@@ -113,6 +116,9 @@ lora:
     enabled: true
   antiblur-lora.safetensors: 
     url: "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-AntiBlur/resolve/main/FLUX-dev-lora-AntiBlur.safetensors"
+    enabled: true
+  SamsungCam-UltraReal-lora.safetensors: 
+    url: "https://civitai.com/api/download/models/1755780?type=Model&format=SafeTensor"
     enabled: true
 
   # SDXL
